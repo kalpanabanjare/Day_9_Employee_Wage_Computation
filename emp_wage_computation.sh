@@ -10,3 +10,10 @@ then
 else
      echo "Absent"
 fi
+
+#Calculate Daily Employee Wage
+
+emp_rate_per_hr=20
+work_hrs=8
+daily_emp_wage=$(($emp_attendance * $work_hrs * $emp_rate_per_hr))
+echo "Daily Employee Wage" $daily_emp_wage
