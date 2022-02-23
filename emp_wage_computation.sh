@@ -8,17 +8,19 @@ max_work_hrs=100
 work_day=20
 total_work_hrs=0
 total_work_day=0
+day=1
 while(( $total_work_hrs != $max_work_hrs && $total_work_day != $work_day ))
 do
-
+echo "Day" $day
 emp_attendance=$(( RANDOM%2 ))
 if (( $emp_attendance == 1 ))
 then
      echo "Present"
+     (( day++ ))
      (( total_work_day++ ))
 else
      echo "Absent"
-     
+     (( day++ ))
 fi
 
 #Add Part time Employee & Wage
