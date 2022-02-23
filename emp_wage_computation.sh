@@ -42,9 +42,13 @@ case $emp_time in
      ;;
 
 esac
-
+echo "Work Hrs" $work_hrs
 total_work_hrs=$(($total_work_hrs + $work_hrs))
-echo "Total work hrs is " $total_work_hrs
+#echo "Total work hrs is " $total_work_hrs
+
+daily_emp_wage=$(($emp_attendance * $work_hrs * $emp_rate_per_hr))
+echo "Daily Employee Wage" $daily_emp_wage
+
 fi
 
 done
