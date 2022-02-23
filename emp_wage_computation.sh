@@ -1,7 +1,8 @@
 echo "Welcome to Employee Wage Computation Program"
 
 #Check Employee is Present or Absent
-
+work_hr()
+{
 emp_rate_per_hr=20
 max_work_hrs=100
 work_day=20
@@ -45,11 +46,22 @@ esac
 total_work_hrs=$(($total_work_hrs + $work_hrs))
 echo "Total work hrs is " $total_work_hrs
 fi
+
 done
 echo "Total work day is" $total_work_day
 
 total_wage=$(($total_work_hrs * $emp_rate_per_hr))
 echo "Total wage is " $total_wage
+}
+work_hr
+
+echo "total work hrs is" $total_work_hrs
+
+
+
+
+
+
 
 
 
