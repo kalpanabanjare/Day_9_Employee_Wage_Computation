@@ -11,6 +11,19 @@ else
      echo "Absent"
 fi
 
+#Add Part time Employee & Wage
+
+emp_time=$(( RANDOM%2 + 1 ))
+
+if (( $emp_time%2 == 0 ))
+then
+     echo "Fulltime"
+     #work_hrs=8
+else
+     echo "Parttime"
+     #work_hrs=8
+fi
+
 #Calculate Daily Employee Wage
 
 emp_rate_per_hr=20
