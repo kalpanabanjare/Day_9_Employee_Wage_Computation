@@ -3,7 +3,6 @@ echo "Welcome to Employee Wage Computation Program"
 #Check Employee is Present or Absent
 
 emp_attendance=$(( RANDOM%2 ))
-
 if (( $emp_attendance == 1 ))
 then
      echo "Present"
@@ -12,9 +11,7 @@ else
 fi
 
 #Add Part time Employee & Wage
-
 emp_time=$(( RANDOM%3 ))
-
 #using switch case
 
 case $emp_time in
@@ -32,8 +29,16 @@ case $emp_time in
      ;;
 
 esac
+
 #Calculate Daily Employee Wage
 
 emp_rate_per_hr=20
 daily_emp_wage=$(($emp_attendance * $work_hrs * $emp_rate_per_hr))
 echo "Daily Employee Wage" $daily_emp_wage
+
+#Calculating Wages for a Month
+
+work_day=20
+monthly_emp_wage=$(($daily_emp_wage * $work_day))
+echo "Monthly Employee Wage" $monthly_emp_wage
+
